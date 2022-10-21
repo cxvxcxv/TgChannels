@@ -8,7 +8,7 @@ export default function Index() {
   useEffect(() => {
     axios.get('api/getChannels').then((response)  => {
       setChannels(response.data); 
-    })
+    }, [])
   }, [channels])
   return <div className='main'>
     {channels.map((channel) => (
